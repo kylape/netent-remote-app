@@ -30,7 +30,8 @@ Run the the client with the following command
 
 	java -jar target/netent-remote-app-client-0.0.1-SNAPSHOT-jar-with-dependencies.jar <server-url> 1000 4000 100 teststring
 
-Wait for the client to throw exceptions in the console log.
+Wait for the client to throw exceptions in the console log. Please note that the client should be run on a remote server (since loopback interface doesn't seem to be affecgted by this).
+
 
  
 
