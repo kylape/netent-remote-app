@@ -20,4 +20,18 @@ The parameters is
  - fourth is number of request per thread
  - fifth is a string to send to the server
 
+To reproduce the issue setup a remote server running JBoss EAP 6.0.1 with default configuration. Add a manager user (using add-user.sh). Also add a remote user with
+	Username: admin
+	Password: admin
+
+Deploy the netent-remote-app/netent-remote-app-ear/target/netent-remote-app.ear to the server.
+
+Run the the client with the following command
+
+	java -jar target/netent-remote-app-client-0.0.1-SNAPSHOT-jar-with-dependencies.jar <server-url> 1000 4000 100 teststring
+
+Wait for the client to throw exceptions in the console log.
+
+ 
+
 
